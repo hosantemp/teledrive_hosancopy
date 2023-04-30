@@ -14,13 +14,13 @@ services:
       context: ../.
       dockerfile: Dockerfile
       args:
-        REACT_APP_TG_API_ID: ${TG_API_ID}
-        REACT_APP_TG_API_HASH: ${TG_API_HASH}
+        REACT_APP_TG_API_ID: 25316445
+        REACT_APP_TG_API_HASH: 59870b7e468bc782b3812804c4918405
     environment:
-      DATABASE_URL: postgres://postgres:${DB_PASSWORD}@db:5432/teledrive?connect_timeout=60&pool_timeout=60&socket_timeout=60
-      REDIS_URI: redis://redis:6379
-    env_file:
-      - .env
+      DATABASE_URL: postgres://postgres:SH8dGqtt4IQ7kCR@teledrivehasanislam511-db.flycast:5432?connect_timeout=60&pool_timeout=60&socket_timeout=60
+      REDIS_URI: redis://default:48dfdebac21941cdaa2fdbb1486b59e2@fly-teledrivehasanislam511-redis.upstash.io
+    #env_file:
+     # - .env
     depends_on:
       - db
       - redis
@@ -30,7 +30,7 @@ services:
     restart: always
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_PASSWORD: SH8dGqtt4IQ7kCR
       POSTGRES_DB: teledrive
     volumes:
       - ./data:/var/lib/postgresql/data
