@@ -12,7 +12,7 @@ processes = []
 [build]
 
 [env]
-/.env
+  docker/.env
 [experimental]
   auto_rollback = true
 
