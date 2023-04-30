@@ -3,7 +3,7 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "tldrive" #your app name
+app = "teledrivehasanislam511" #your app name
 kill_signal = "SIGINT"
 kill_timeout = 5
 primary_region = "sin" #your region
@@ -12,7 +12,7 @@ processes = []
 [build]
 
 [env]
-
+/.env
 [experimental]
   auto_rollback = true
 
