@@ -19,8 +19,8 @@ services:
     environment:
       DATABASE_URL: postgres://postgres:SH8dGqtt4IQ7kCR@teledrivehasanislam511-db.flycast:5432?connect_timeout=60&pool_timeout=60&socket_timeout=60
       REDIS_URI: redis://default:48dfdebac21941cdaa2fdbb1486b59e2@fly-teledrivehasanislam511-redis.upstash.io
-    #env_file:
-     # - .env
+    env_file:
+      - ./env
     depends_on:
       - db
       - redis
